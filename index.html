@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: #2ecc71;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background: #27ae60;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        .tip-list {
+            list-style: none;
+            margin-left: 1rem;
+        }
+
+        .tip-list li {
+            margin: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .tip-list li:before {
+            content: "✓";
+            color: #2ecc71;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-button {
+            background: #2ecc71;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #27ae60;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GOOD LIFE WITH JANE</h1>
+        <p>Simple Steps to Improve Your Wellbeing</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#exercise">Exercise</a></li>
+            <li><a href="#mental">Mental Health</a></li>
+            <li><a href="#sleep">Sleep</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="section" id="nutrition">
+            <h2>Nutrition Tips</h2>
+            <ul class="tip-list">
+                <li>Eat a variety of colorful fruits and vegetables daily</li>
+                <li>Choose whole grains over processed carbohydrates</li>
+                <li>Stay hydrated with 6-8 glasses of water</li>
+                <li>Limit processed foods and added sugars</li>
+                <li>Include lean proteins in your diet</li>
+            </ul>
+            <button class="cta-button" onclick="showTip('nutrition')">Get Random Tip</button>
+        </div>
+
+        <div class="section" id="exercise">
+            <h2>Exercise Guidelines</h2>
+            <ul class="tip-list">
+                <li>Aim for 150 minutes of moderate exercise weekly</li>
+                <li>Include strength training 2-3 times per week</li>
+                <li>Take regular stretch breaks if sitting long hours</li>
+                <li>Find activities you enjoy to stay consistent</li>
+                <li>Warm up before and cool down after workouts</li>
+            </ul>
+            <button class="cta-button" onclick="showTip('exercise')">Get Random Tip</button>
+        </div>
+
+        <div class="section" id="mental">
+            <h2>Mental Health Care</h2>
+            <ul class="tip-list">
+                <li>Practice mindfulness or meditation daily</li>
+                <li>Connect with friends and family regularly</li>
+                <li>Take breaks from screens and social media</li>
+                <li>Seek professional help when needed</li>
+                <li>Engage in hobbies you love</li>
+            </ul>
+            <button class="cta-button" onclick="showTip('mental')">Get Random Tip</button>
+        </div>
+
+        <div class="section" id="sleep">
+            <h2>Sleep Better</h2>
+            <ul class="tip-list">
+                <li>Maintain a consistent sleep schedule</li>
+                <li>Create a relaxing bedtime routine</li>
+                <li>Avoid screens 1-2 hours before bed</li>
+                <li>Keep your bedroom dark and cool</li>
+                <li>Limit caffeine in the afternoon</li>
+            </ul>
+            <button class="cta-button" onclick="showTip('sleep')">Get Random Tip</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Healthy Living Guide With Jane. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const tips = {
+            nutrition: [
+                "Eat a variety of colorful fruits and vegetables daily",
+                "Choose whole grains over processed carbohydrates",
+                "Stay hydrated with 6-8 glasses of water",
+                "Limit processed foods and added sugars",
+                "Include lean proteins in your diet"
+            ],
+            exercise: [
+                "Aim for 150 minutes of moderate exercise weekly",
+                "Include strength training 2-3 times per week",
+                "Take regular stretch breaks if sitting long hours",
+                "Find activities you enjoy to stay consistent",
+                "Warm up before and cool down after workouts"
+            ],
+            mental: [
+                "Practice mindfulness or meditation daily",
+                "Connect with friends and family regularly",
+                "Take breaks from screens and social media",
+                "Seek professional help when needed",
+                "Engage in hobbies you love"
+            ],
+            sleep: [
+                "Maintain a consistent sleep schedule",
+                "Create a relaxing bedtime routine",
+                "Avoid screens 1-2 hours before bed",
+                "Keep your bedroom dark and cool",
+                "Limit caffeine in the afternoon"
+            ]
+        };
+
+        function showTip(category) {
+            const randomTip = tips[category][Math.floor(Math.random() * tips[category].length)];
+            alert(`Health Tip: ${randomTip}`);
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
